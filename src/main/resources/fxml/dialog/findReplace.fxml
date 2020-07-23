@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox maxHeight="200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yusufsezer.ysnotepadfx.controller.FindReplaceController">
+   <children>
+      <VBox minWidth="300.0">
+         <children>
+            <VBox>
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutY="70.0" spacing="30.0">
+                     <children>
+                        <Label text="Find what:" />
+                        <TextField fx:id="textFieldFind" onKeyPressed="#onKeyPressedFind" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox fx:id="hboxReplace" alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Label text="Replace With: " />
+                        <TextField fx:id="textFieldReplace" HBox.hgrow="ALWAYS" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox>
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <CheckBox fx:id="checkBoxMatchCase" mnemonicParsing="false" text="Match case">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                        <CheckBox fx:id="checkBoxWraparound" mnemonicParsing="false" text="Wrap around">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets top="40.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <TitledPane fx:id="titledPaneDirection" collapsible="false" text="Direction">
+                     <content>
+                        <HBox>
+                           <children>
+                              <RadioButton fx:id="radioButtonUp" mnemonicParsing="false" text="Up">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="direction" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton layoutX="20.0" layoutY="20.0" mnemonicParsing="false" selected="true" text="Down" toggleGroup="$direction" />
+                           </children>
+                        </HBox>
+                     </content>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TitledPane>
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="10.0" layoutY="10.0">
+         <children>
+            <Button fx:id="buttonFindNext" minWidth="80.0" mnemonicParsing="false" onAction="#onActionFindNext" text="Find Next">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="3.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="buttonReplace" layoutX="10.0" layoutY="10.0" minWidth="80.0" mnemonicParsing="false" onAction="#onActionReplace" text="Replace">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="buttonReplaceAll" layoutX="10.0" layoutY="35.0" minWidth="80.0" mnemonicParsing="false" onAction="#onActionReplaceAll" text="Replace All">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button layoutX="10.0" layoutY="60.0" minWidth="80.0" mnemonicParsing="false" onAction="#onActionCancel" text="Cancel">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</HBox>

@@ -1,0 +1,28 @@
+.text-area {
+    -fx-background-insets: 0;
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area:focused .content {
+    -fx-background-color: transparent, white, transparent, white;
+}
+
+.text-area .content {
+    -fx-padding: 0 0 0 3px;
+}
+
+.menu-bar {
+    -fx-background-color: white;
+    -fx-border-color: silver; 
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 0;
+    -fx-margin: 0;
+}
+
+.menu-item > .accelerator-text {
+    -fx-padding: 0 0 0 30px;
+}
