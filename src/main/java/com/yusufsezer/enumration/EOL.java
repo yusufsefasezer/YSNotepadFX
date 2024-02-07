@@ -1,4 +1,4 @@
-package com.yusufsezer.ysnotepadfx.enumration;
+package com.yusufsezer.enumration;
 
 public enum EOL {
 

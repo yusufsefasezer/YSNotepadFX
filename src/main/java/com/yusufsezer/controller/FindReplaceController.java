@@ -1,4 +1,4 @@
-package com.yusufsezer.ysnotepadfx.controller;
+package com.yusufsezer.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;

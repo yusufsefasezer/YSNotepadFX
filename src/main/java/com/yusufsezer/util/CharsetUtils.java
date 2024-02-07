@@ -1,10 +1,10 @@
-package com.yusufsezer.ysnotepadfx.util;
+package com.yusufsezer.util;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
-public class CharsetUtil {
+public class CharsetUtils {
 
     public static Charset determineCharset(byte[] value) {
 

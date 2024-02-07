@@ -1,10 +1,10 @@
-package com.yusufsezer.ysnotepadfx.controller;
+package com.yusufsezer.controller;
 
 import com.yusufsezer.App;
-import com.yusufsezer.ysnotepadfx.enumration.EOL;
-import com.yusufsezer.ysnotepadfx.enumration.SaveDialogResult;
-import com.yusufsezer.ysnotepadfx.util.CharsetUtil;
-import com.yusufsezer.ysnotepadfx.util.JavaFXUtil;
+import com.yusufsezer.enumration.EOL;
+import com.yusufsezer.enumration.SaveDialogResult;
+import com.yusufsezer.util.CharsetUtils;
+import com.yusufsezer.util.JavaFXUtils;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -177,7 +177,7 @@ public class MainController implements Initializable {
     private void createFindReplaceWindow() {
         try {
             findReplaceWindow = new Stage();
-            FXMLLoader loadFXML = JavaFXUtil.loadFXML("dialog/findReplace");
+            FXMLLoader loadFXML = JavaFXUtils.loadFXML("dialog/findReplace");
             Parent load = loadFXML.load();
             load.setOnKeyPressed((event) -> {
                 if (event.getCode() == KeyCode.ESCAPE) {
@@ -200,7 +200,7 @@ public class MainController implements Initializable {
     private void createGotoWindow() {
         try {
             gotoWindow = new Stage();
-            FXMLLoader loadFXML = JavaFXUtil.loadFXML("dialog/goto");
+            FXMLLoader loadFXML = JavaFXUtils.loadFXML("dialog/goto");
             Parent load = loadFXML.load();
             load.setOnKeyPressed((event) -> {
                 if (event.getCode() == KeyCode.ESCAPE) {
@@ -297,8 +297,8 @@ public class MainController implements Initializable {
 
     @FXML
     void onActionNewWindow(ActionEvent event) {
-        JavaFXUtil
-                .createWindow(JavaFXUtil.loadFXML("main"))
+        JavaFXUtils
+                .createWindow(JavaFXUtils.loadFXML("main"))
                 .show();
     }
 
@@ -364,7 +364,7 @@ public class MainController implements Initializable {
                                 .get()
                                 .toPath());
                 charsetProperty
-                        .set(CharsetUtil
+                        .set(CharsetUtils
                                 .determineCharset(readAllBytes));
                 String text = new String(readAllBytes, charsetProperty.get());
                 eolProperty

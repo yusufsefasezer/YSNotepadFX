@@ -1,6 +1,6 @@
-package com.yusufsezer.ysnotepadfx.util;
+package com.yusufsezer.util;
 
-import com.yusufsezer.ysnotepadfx.controller.MainController;
+import com.yusufsezer.controller.MainController;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -10,7 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.input.TransferMode;
 import javafx.stage.Stage;
 
-public class JavaFXUtil {
+public class JavaFXUtils {
 
     public final static String BUNDLE_NAME = "bundle/text";
     public final static String FXML_PATH = "fxml/";
@@ -24,14 +24,14 @@ public class JavaFXUtil {
     }
 
     public static FXMLLoader loadFXMLFromResource(String fxml) {
-        URL url = JavaFXUtil.class.getClassLoader().getResource(fxml);
-        ResourceBundle rb = ResourceBundle.getBundle(JavaFXUtil.BUNDLE_NAME);
+        URL url = JavaFXUtils.class.getClassLoader().getResource(fxml);
+        ResourceBundle rb = ResourceBundle.getBundle(JavaFXUtils.BUNDLE_NAME);
         return new FXMLLoader(url, rb);
     }
 
     public static String getBundleMessage(String msg) {
         return ResourceBundle
-                .getBundle(JavaFXUtil.BUNDLE_NAME)
+                .getBundle(JavaFXUtils.BUNDLE_NAME)
                 .getString(msg);
     }
 
