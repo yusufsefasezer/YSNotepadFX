@@ -2,7 +2,7 @@
 
 YSNotepadFX is a simple Notepad JavaFX application.
 
-This project developed with Java(JDK 14), JavaFX(OpenJFX) and Maven.
+This project developed with Java(JDK 21), JavaFX(OpenJFX) and Maven.
 
 ## [Download](https://github.com/yusufsefasezer/YSNotepadFX/archive/master.zip)
 
