@@ -19,20 +19,20 @@ public class JavaFXUtils {
         return loadFXMLFromDirectory(FXML_PATH, fxml);
     }
 
-    public static FXMLLoader loadFXMLFromDirectory(String dir, String fxml) {
-        return loadFXMLFromResource(dir + fxml + ".fxml");
+    public static FXMLLoader loadFXMLFromDirectory(String directory, String fxmlFileName) {
+        return loadFXMLFromResource(directory + fxmlFileName + ".fxml");
     }
 
-    public static FXMLLoader loadFXMLFromResource(String fxml) {
-        URL url = JavaFXUtils.class.getClassLoader().getResource(fxml);
+    public static FXMLLoader loadFXMLFromResource(String fxmlPath) {
+        URL url = JavaFXUtils.class.getClassLoader().getResource(fxmlPath);
         ResourceBundle rb = ResourceBundle.getBundle(JavaFXUtils.BUNDLE_NAME);
         return new FXMLLoader(url, rb);
     }
 
-    public static String getBundleMessage(String msg) {
+    public static String getBundleMessage(String message) {
         return ResourceBundle
                 .getBundle(JavaFXUtils.BUNDLE_NAME)
-                .getString(msg);
+                .getString(message);
     }
 
     public static Stage createWindow(FXMLLoader loader) {
@@ -42,8 +42,7 @@ public class JavaFXUtils {
             newStage.setScene(scene);
             newStage.getIcons().add(new Image("icon.png"));
             newStage.setTitle("Untitled - YSNotepadFX");
-            MainController controller = loader
-                    .<MainController>getController();
+            MainController controller = loader.<MainController>getController();
             newStage.setOnCloseRequest((t) -> {
                 controller.closeWindow();
             });
