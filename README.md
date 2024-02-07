@@ -16,6 +16,13 @@ If you have maven execute the below command to run.
 mvn javafx:run
 ```
 
+You can use the following commands to generate a Jar file.
+
+```
+mvn package
+java -jar target\YSNotepadFX.jar
+```
+
 ## Screenshot
 
 - [Main](screenshot/main.png)
@@ -32,7 +39,7 @@ mvn javafx:run
 ## Whats Next
 
 - i18n support,
-- portable support with single .jar file,
+- ~~portable support with single .jar file~~,
 - performance
 
 # License
