@@ -5,16 +5,23 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 
-public class App extends Application {
-
-    @Override
-    public void start(Stage stage) throws Exception {
-        FXMLLoader loader = JavaFXUtils.loadFXML("main");
-        JavaFXUtils.createWindow(loader).show();
-    }
+public class App {
 
     public static void main(String[] args) {
-        launch();
+        YSNotepadFXApp.main(args);
+    }
+
+    public static class YSNotepadFXApp extends Application {
+
+        public static void main(String[] args) {
+            launch();
+        }
+
+        @Override
+        public void start(Stage stage) throws Exception {
+            FXMLLoader loader = JavaFXUtils.loadFXML("main");
+            JavaFXUtils.createWindow(loader).show();
+        }
     }
 
 }

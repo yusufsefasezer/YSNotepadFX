@@ -568,7 +568,7 @@ public class MainController implements Initializable {
 
     @FXML
     void onActionViewHelp(ActionEvent event) {
-        new App().getHostServices().showDocument("www.yusufsezer.com");
+        new App.YSNotepadFXApp().getHostServices().showDocument("www.yusufsezer.com");
     }
 
     @FXML
