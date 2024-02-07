@@ -15,7 +15,6 @@ import java.nio.file.StandardOpenOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
-import javafx.application.Platform;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleBooleanProperty;
@@ -160,8 +159,8 @@ public class MainController implements Initializable {
                 && cancelClicked()) {
             return;
         }
-        Platform.exit();
-        System.exit(0);
+
+        getWindow().close();
     }
 
     @FXML
